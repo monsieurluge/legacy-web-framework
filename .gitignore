@@ -1,1 +1,3 @@
+config/*
+!config/config.sample.php
 vendor/*
