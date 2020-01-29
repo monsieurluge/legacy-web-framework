@@ -3,7 +3,10 @@
 require '../init.php';
 
 use monsieurluge\lwf\Service\BasicServiceProvider;
+use monsieurluge\lwfdemo\Config\DummyServices;
 
 $serviceProvider = new BasicServiceProvider();
 
-die('OK');
+(new DummyServices())->declareTo($serviceProvider);
+
+$serviceProvider->named('dieded')->run();

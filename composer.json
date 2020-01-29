@@ -15,7 +15,9 @@
     },
     "autoload": {
         "psr-4": {
-            "monsieurluge\\lwf\\": "src/"
+            "monsieurluge\\lwf\\": "src/",
+            "monsieurluge\\lwfdemo\\App\\": "demo/app/",
+            "monsieurluge\\lwfdemo\\Config\\": "demo/config/"
         }
     },
     "require-dev": {
