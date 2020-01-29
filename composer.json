@@ -1,0 +1,21 @@
+{
+    "name": "monsieurluge/legacy-web-framework",
+    "type": "framework",
+    "license": "UNLICENCED",
+    "description": "A legacy web framework, for archiving purpose only",
+    "authors": [
+        {
+            "name": "Laurent Vergé",
+            "email": "monsieurluge@gmail.com",
+            "role": "developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+    },
+    "autoload": {
+        "psr-4": {
+            "monsieurluge\\lwf\\": "src/",
+        }
+    }
+}
