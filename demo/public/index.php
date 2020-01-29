@@ -3,10 +3,14 @@
 require '../init.php';
 
 use monsieurluge\lwf\Service\BasicServiceProvider;
+use monsieurluge\lwf\Service\PopulatedServiceProvider;
 use monsieurluge\lwfdemo\Config\DummyServices;
 
-$serviceProvider = new BasicServiceProvider();
-
-(new DummyServices())->declareTo($serviceProvider);
+$serviceProvider = new PopulatedServiceProvider(
+    new BasicServiceProvider(),
+    [
+        new DummyServices(),
+    ]
+);
 
 $serviceProvider->named('dieded')->run();
