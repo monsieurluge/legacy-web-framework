@@ -19,6 +19,10 @@ final class PopulatedServiceProvider implements ServiceProvider
     /** @var Services[] */
     private $services;
 
+    /**
+     * @param ServiceProvider $origin
+     * @param Services[]      $services
+     */
     public function __construct(ServiceProvider $origin, array $services)
     {
         $this->booted   = false;

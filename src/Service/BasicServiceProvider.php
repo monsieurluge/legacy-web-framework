@@ -8,7 +8,7 @@ use monsieurluge\lwf\Service\ServiceProvider;
 
 final class BasicServiceProvider implements ServiceProvider
 {
-    /** @var array */
+    /** @var array<string,Closure> */
     private $factories;
 
     public function __construct()

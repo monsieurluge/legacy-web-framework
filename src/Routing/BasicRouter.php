@@ -24,7 +24,7 @@ final class BasicRouter implements Router
     {
         $dispatched = array_reduce(
             $this->routes,
-            $this->dispatchIfPossible($request),
+            $this->dispatchIfNotHandled($request),
             false
         );
 
@@ -41,7 +41,14 @@ final class BasicRouter implements Router
         $this->routes[] = $route;
     }
 
-    private function dispatchIfPossible($request): Closure
+    /**
+     * Dispatches the request if it has not been already handled.
+     *
+     * @param mixed $request
+     *
+     * @return Closure
+     */
+    private function dispatchIfNotHandled($request): Closure
     {
         return function (bool $dispatched, Route $route) use ($request): bool {
             if (true === $dispatched) {

@@ -3,6 +3,7 @@
 namespace monsieurluge\lwf\Service;
 
 use Closure;
+use Exception;
 
 interface ServiceProvider
 {
