@@ -10,7 +10,7 @@ use monsieurluge\lwf\Service\ServiceProvider;
 use monsieurluge\lwf\Service\Services;
 use monsieurluge\lwfdemo\Config\Routing\PagesGet;
 
-final class RoutingServices extends AbstractServices implements Services
+final class DemoRoutingServices extends AbstractServices implements Services
 {
     /**
      * @inheritDoc
