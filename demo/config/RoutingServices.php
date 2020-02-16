@@ -2,11 +2,12 @@
 
 namespace monsieurluge\lwfdemo\Config;
 
-use monsieurluge\lwf\Routing\AlwaysHandleRoute;
 use monsieurluge\lwf\Routing\BasicRouter;
+use monsieurluge\lwf\Routing\PopulatedRouter;
 use monsieurluge\lwf\Routing\Router;
 use monsieurluge\lwf\Service\ServiceProvider;
 use monsieurluge\lwf\Service\Services;
+use monsieurluge\lwfdemo\Config\Routing\PagesGet;
 
 final class RoutingServices implements Services
 {
@@ -26,11 +27,10 @@ final class RoutingServices implements Services
     {
         return [
             Router::class => function () {
-                $router = new BasicRouter();
-
-                $router->register(new AlwaysHandleRoute());
-
-                return $router;
+                return new PopulatedRouter(
+                    new BasicRouter(),
+                    new PagesGet()
+                );
             }
         ];
     }
