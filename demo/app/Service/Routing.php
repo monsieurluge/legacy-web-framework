@@ -1,6 +1,6 @@
 <?php
 
-namespace monsieurluge\lwfdemo\Config;
+namespace monsieurluge\lwfdemo\App\Service;
 
 use monsieurluge\lwf\Routing\BasicRouter;
 use monsieurluge\lwf\Routing\PopulatedRouter;
@@ -10,7 +10,7 @@ use monsieurluge\lwf\Service\ServiceProvider;
 use monsieurluge\lwf\Service\Services;
 use monsieurluge\lwfdemo\Config\Routing\PagesGet;
 
-final class DemoRoutingServices extends AbstractServices implements Services
+final class Routing extends AbstractServices implements Services
 {
     /**
      * @inheritDoc

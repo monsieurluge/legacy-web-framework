@@ -5,14 +5,14 @@ require '../init.php';
 use monsieurluge\lwf\Routing\Router;
 use monsieurluge\lwf\Service\BasicServiceProvider;
 use monsieurluge\lwf\Service\PopulatedServiceProvider;
-use monsieurluge\lwfdemo\Config\DemoRoutingServices;
+use monsieurluge\lwfdemo\App\Service\Routing as DemoRoutingService;
 
 // create the service provider
 
 $serviceProvider = new PopulatedServiceProvider(
     new BasicServiceProvider(),
     [
-        new DemoRoutingServices(),
+        new DemoRoutingService(),
     ]
 );
 
