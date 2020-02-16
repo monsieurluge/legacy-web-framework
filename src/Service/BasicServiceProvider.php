@@ -27,7 +27,7 @@ final class BasicServiceProvider implements ServiceProvider
     /**
      * @inheritDoc
      */
-    public function named(string $name)
+    public function provide(string $name)
     {
         if (isset($this->factories[$name])) {
             return ($this->factories[$name])($this);

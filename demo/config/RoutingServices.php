@@ -2,10 +2,11 @@
 
 namespace monsieurluge\lwfdemo\Config;
 
+use monsieurluge\lwf\Routing\AlwaysHandleRoute;
+use monsieurluge\lwf\Routing\BasicRouter;
+use monsieurluge\lwf\Routing\Router;
 use monsieurluge\lwf\Service\ServiceProvider;
 use monsieurluge\lwf\Service\Services;
-use monsieurluge\lwf\Routing\BasicRouter;
-use monsieurluge\lwf\Routing\AlwaysHandleRoute;
 
 final class RoutingServices implements Services
 {
@@ -24,7 +25,7 @@ final class RoutingServices implements Services
     private function services(): array
     {
         return [
-            'router' => function () {
+            Router::class => function () {
                 $router = new BasicRouter();
 
                 $router->register(new AlwaysHandleRoute());

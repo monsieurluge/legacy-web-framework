@@ -41,13 +41,13 @@ final class PopulatedServiceProvider implements ServiceProvider
     /**
      * @inheritDoc
      */
-    public function named(string $name)
+    public function provide(string $name)
     {
         if (false === $this->booted) {
             $this->boot();
         }
 
-        return $this->origin->named($name);
+        return $this->origin->provide($name);
     }
 
     /**

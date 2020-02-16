@@ -10,7 +10,7 @@ interface ServiceProvider
     /**
      * Register a service factory.
      *
-     * @param string  $name    the service name
+     * @param string  $name    the service interface name
      * @param Closure $factory the factory function as follows: ServiceProvider -> <Service>
      */
     public function register(string $name, Closure $factory): void;
@@ -23,5 +23,5 @@ interface ServiceProvider
      * @return mixed
      * @throws Exception if the service does not exist
      */
-    public function named(string $name);
+    public function provide(string $name);
 }

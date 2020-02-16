@@ -2,6 +2,7 @@
 
 require '../init.php';
 
+use monsieurluge\lwf\Routing\Router;
 use monsieurluge\lwf\Service\BasicServiceProvider;
 use monsieurluge\lwf\Service\PopulatedServiceProvider;
 use monsieurluge\lwfdemo\Config\RoutingServices;
@@ -17,4 +18,4 @@ $serviceProvider = new PopulatedServiceProvider(
 
 // run the application
 
-$serviceProvider->named('router')->dispatch(null);
+$serviceProvider->provide(Router::class)->dispatch(null);
