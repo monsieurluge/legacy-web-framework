@@ -18,4 +18,4 @@ $serviceProvider = new PopulatedServiceProvider(
 
 // run the application
 
-$serviceProvider->provide(Router::class)->dispatch(null);
+$serviceProvider->provide(Router::class)->dispatch('FIXME: inject request');
