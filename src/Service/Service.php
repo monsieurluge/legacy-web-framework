@@ -4,10 +4,10 @@ namespace monsieurluge\lwf\Service;
 
 use monsieurluge\lwf\Service\ServiceProvider;
 
-interface Services
+interface Service
 {
     /**
-     * Declares the services to the provider.
+     * Declares the service to the provider.
      *
      * @param ServiceProvider $provider
      */

@@ -4,7 +4,7 @@ namespace monsieurluge\lwf\Service;
 
 use Closure;
 use monsieurluge\lwf\Service\ServiceProvider;
-use monsieurluge\lwf\Service\Services;
+use monsieurluge\lwf\Service\Service;
 
 /**
  * Service provider decorator.
@@ -16,12 +16,12 @@ final class PopulatedServiceProvider implements ServiceProvider
     private $booted;
     /** @var ServiceProvider */
     private $origin;
-    /** @var Services[] */
+    /** @var Service[] */
     private $services;
 
     /**
      * @param ServiceProvider $origin
-     * @param Services[]      $services
+     * @param Service[]      $services
      */
     public function __construct(ServiceProvider $origin, array $services)
     {

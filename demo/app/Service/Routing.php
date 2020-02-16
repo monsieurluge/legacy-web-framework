@@ -5,25 +5,22 @@ namespace monsieurluge\lwfdemo\App\Service;
 use monsieurluge\lwf\Routing\BasicRouter;
 use monsieurluge\lwf\Routing\PopulatedRouter;
 use monsieurluge\lwf\Routing\Router;
-use monsieurluge\lwf\Service\AbstractServices;
 use monsieurluge\lwf\Service\ServiceProvider;
-use monsieurluge\lwf\Service\Services;
+use monsieurluge\lwf\Service\Service;
 use monsieurluge\lwfdemo\Config\Routing\PagesGet;
 
-final class Routing extends AbstractServices implements Services
+final class Routing implements Service
 {
     /**
      * @inheritDoc
      */
-    protected function services(): array
+    public function declareTo(ServiceProvider $provider): void
     {
-        return [
-            Router::class => function () {
-                return new PopulatedRouter(
-                    new BasicRouter(),
-                    new PagesGet()
-                );
-            }
-        ];
+        $provider->register(Router::class, function () {
+            return new PopulatedRouter(
+                new BasicRouter(),
+                new PagesGet()
+            );
+        });
     }
 }
