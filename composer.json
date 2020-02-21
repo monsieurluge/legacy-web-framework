@@ -10,12 +10,13 @@
             "role": "developer"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "php": "^7.2"
     },
     "autoload": {
         "psr-4": {
-            "monsieurluge\\lwf\\": "src/",
+            "monsieurluge\\lwf\\": "src/"
         }
     },
     "require-dev": {
