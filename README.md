@@ -1,2 +1,2 @@
-# legacy-web-framework
-A legacy web framework, for archiving purpose only
+# legacy-web-project
+A legacy web project, for archiving purpose only
