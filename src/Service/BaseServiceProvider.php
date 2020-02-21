@@ -6,7 +6,7 @@ use Closure;
 use Exception;
 use monsieurluge\lwf\Service\ServiceProvider;
 
-final class BasicServiceProvider implements ServiceProvider
+final class BaseServiceProvider implements ServiceProvider
 {
     /** @var array<string,Closure> */
     private $factories;
